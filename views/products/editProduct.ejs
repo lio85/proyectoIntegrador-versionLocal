@@ -90,7 +90,7 @@
                     <button class="prodFormButton" type="submit">Confirmar</button>
                 </div>
             </form> 
-            <form action="/product/<%=product.id%>?_method=DELETE" method="POST"" onsubmit="return confirm('Está seguro que desea eliminar <%=product.name%>?')">
+            <form action="/product/<%=product.id%>?_method=DELETE" method="POST" onsubmit="return confirm('Está seguro que desea eliminar <%=product.name%>?')">
                 <button type="submit" class="prodFormButton">Eliminar</button>
             </form>
         </div>   

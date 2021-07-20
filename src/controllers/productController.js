@@ -118,16 +118,24 @@ let productController = {
         for(let i=0; i<productListOl.length; i++){
             if(productListOl[i].id==id){
                 productListOl[i].inStock= false;
+
+                // bloque de codigo para borrar fisicamente el registro en el json
                 /*if(productListOl[i].productImage){
                     var imageToDelete= productListOl[i].productImage;
                 }
                 productListOl.splice(i,1);*/
-                break;
+                // bloque de codigo para borrar fisicamente el registro en el json
+                
             }
+            break;
         };
+
+        // bloque de codigo para borrar la imagen fisicamente
         /*if(imageToDelete){
             fs.unlinkSync(path.join(__dirname, '../../public/imagenes/productImages/')+imageToDelete);
         }*/
+        // bloque de codigo para borrar la imagen fisicamente
+
         fs.writeFileSync(productListPath,  JSON.stringify(productListOl, null, " "));
         res.redirect('/product');   
     }

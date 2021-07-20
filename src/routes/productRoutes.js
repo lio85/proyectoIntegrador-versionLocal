@@ -50,7 +50,7 @@ router.get('/:id/edit' , productController.edit);
 router.put('/:id' , fileUpload.single(
     "productImage"),productController.update);
 
-// accion de editar un producto
+// accion de eliminar logicamente un producto
 router.delete('/:id', productController.destroy); 
 
 module.exports = router;
